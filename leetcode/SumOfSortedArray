@@ -1,0 +1,24 @@
+class Solution {
+    public int[] sortedSquares(int[] nums) {
+        int size = nums.length;
+        int[] output = new int[size];
+        int curr = size - 1;
+        int p1 = 0, p2 = nums.length - 1;
+        while (p1 <= p2) {
+            // left
+            int tmpLeft = nums[p1] * nums[p1];
+            // right
+            int tmpRight = nums[p2] * nums[p2];
+            if (tmpLeft > tmpRight) {
+                output[curr] = tmpLeft;
+                curr--;
+                p1++;
+            } else {
+                output[curr] = tmpRight;
+                curr--;
+                p2--;
+            }
+        }
+        return output;
+    }
+}
