@@ -75,11 +75,11 @@ public class DownloadManager extends JFrame
         tableModel = new DownloadsTableModel();
         table = new JTable(tableModel);
         table.getSelectionModel().addListSelectionListener(new
-                                                                   ListSelectionListener() {
-                                                                       public void valueChanged(ListSelectionEvent e) {
-                                                                           tableSelectionChanged();
-                                                                       }
-                                                                   });
+           ListSelectionListener() {
+               public void valueChanged(ListSelectionEvent e) {
+                   tableSelectionChanged();
+               }
+           });
         // Allow only one row at a time to be selected.
         table.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 
